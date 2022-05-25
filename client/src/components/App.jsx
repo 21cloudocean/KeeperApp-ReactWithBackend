@@ -4,9 +4,13 @@ import Note from "./Note";
 import Footer from "./Footer";
 import CreateArea from "./CreateArea";
 import axios from "axios";
-
+//用来针对route进行GET POST等操作。
 const url = "http://localhost:4747";
-/*** Remember that the proxy to the backend server is http://localhost:8000 ***/
+/*** Remember that the proxy to the backend server is http://localhost:4747
+这条提示用于把"proxy": "http://localhost:4747"放入package.json而在本文件中不再需要提及的情况
+即：axios.get("/")即可，不需要加url。
+这里没有采用这种方法，而是把链接简化成变量
+目的都是简化code，不需要每次都输入这个链接***/
 
 function App() {
   const [items,setItems] = useState([]);
